@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  
+  <!-- ----- the google fonts routine ----------- -->
+
+  <!-- first the preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- then the preload -->
+  <link
+    link
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca:wght@400&display=swap"
+  />
+
+  <!-- then the stylesheet setting media to print -->
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca:wght@400&display=swap"
+    media="print"
+    onload="this.media='all'"
+  />
+
+  <!-- then the noscript fallback -->
+  <noscript>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca:wght@400&display=swap"
+    />
+  </noscript>
+
+  <!-- custom styles -->
+
+  <link rel="stylesheet" href="./styles/jwc-reset.css" />
+  <link rel="stylesheet" href="./styles/style.css" />
+
+  <!-- icon link last -->
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="./images/favicon-32x32.png"
+  />
+
+
+  <title>Frontend Mentor | 3-column preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+<body>
+
+  <h1>Frontend Mentor | 3-column preview card component</h1>
+
+  <main class="container">
+
+    <section class="preview-card">
+
+      <div class="preview preview-sedan">
+        <span class="preview-icon preview-icon-sedan" aria-hidden="true"></span>
+        <h2>Sedans</h2> 
+        <p>Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.</p>
+        <a href="#learnmoresedan" class="pill pill-learnmore pill-learnmore-sedan" title="More about Sedans">Learn More</a>
+      </div>
+
+      <div class="preview preview-suv">
+        <span class="preview-icon preview-icon-suv" aria-hidden="true"></span>
+        <h2>SUVs</h2>
+        <p>Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation and off-road adventures.</p>
+        <!-- <p>An extra paragraph to see what happens.</p> -->
+        <a href="#learnmoresuv" class="pill pill-learnmore pill-learnmore-suv" title="More about SUVs">Learn More</a>
+      </div>
+
+      <div class="preview preview-luxury">
+        <span class="preview-icon preview-icon-luxury" aria-hidden="true"></span>
+        <h2>Luxury</h2>
+        <p>Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in style.</p>
+        <a href="#learnmoreluxury" class="pill pill-learnmore pill-learnmore-luxury" title="More about Luxury">Learn More</a>
+      </div>
+
+    </section>
+
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">GRB</a>.
+  </div>
+</body>
+</html>

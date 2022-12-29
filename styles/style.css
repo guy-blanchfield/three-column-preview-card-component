@@ -1,0 +1,168 @@
+:root {
+    /* colours */
+
+    --primary-brightorange: hsl(31, 77%, 52%);
+    --primary-darkcyan: hsl(184, 100%, 22%);
+    --primary-verydarkcyan: hsl(179, 100%, 13%);
+
+    --neutral-transparentwhite: hsla(0, 0%, 100%, 0.75);
+    --neutral-verylightgray: hsl(0, 0%, 95%);
+
+    --text: var(--neutral-transparentwhite);
+    /* backgrounds, headings, buttons */
+    --bg: var(--neutral-verylightgray);
+
+    --accent1: var(--primary-brightorange);
+    --accent2: var(--primary-darkcyan);
+    --accent3: var(--primary-verydarkcyan);
+
+    /* sizes */
+    --card-width-mobile: 330px;
+    --card-width-desktop: 1100px;
+
+    --card-width-mobile: min(88vw, 325px);
+    --card-width-desktop: min(88vw, 925px);
+
+
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+h1 {
+    font-family: 'Big Shoulders Display';
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--primary-darkcyan);
+    text-transform: uppercase;
+    padding: 0.5rem;
+    border-bottom: 2px solid var(--accent3);
+    margin: 1rem 0 2rem 0;
+}
+
+.container {
+    display: grid;
+    place-content: center;
+}
+
+.preview-card {
+    display: flex;
+    flex-direction: column;
+    width: var(--card-width-mobile);
+    /* background-color: var(--bg-alt); */
+    background-color: blueviolet;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 900px) {
+    .preview-card {
+        flex-direction: row;
+        width: var(--card-width-desktop);
+    }
+}
+
+.preview {
+    display: flex;
+    flex-direction: column;
+    /* An initial setting of a flex container is align-items: stretch. 
+    This means that flex items will expand to cover the 
+    full length of the container along the cross axis. */
+    
+    /* Use align-items: flex-start on the container, 
+    or align-self: flex-start on the flex items. */
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 3rem;
+}
+
+.preview-sedan {
+    background-color: var(--accent1);
+}
+
+.preview-suv {
+    background-color: var(--accent2);
+}
+
+.preview-luxury {
+    background-color: var(--accent3);
+}
+
+.preview-icon {
+    width: 64px;
+    height: 40px;
+    background: no-repeat;
+}
+
+.preview-icon-sedan {
+    background-image: url(../images/icon-sedans.svg);
+}
+.preview-icon-suv {
+    background-image: url(../images/icon-suvs.svg);
+}
+.preview-icon-luxury {
+    background-image: url(../images/icon-luxury.svg);
+}
+
+.preview h2 {
+    font-family: 'Big Shoulders Display';
+    font-weight: 700;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    color: var(--bg);
+}
+
+.preview p {
+    color: var(--text-muted);
+    line-height: 1.5rem;
+}
+
+.pill {
+    padding: .5rem 2.3rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    /* margin-top auto to get the pills to align with the bottom */
+    /* in case the paragraph lengths aren't uniform */
+    margin-top: auto;
+}
+
+.pill-learnmore {
+    background-color: var(--bg);
+    border: 2px solid var(--bg);
+}
+
+.pill-learnmore:hover, .pill-learnmore:focus {
+    color: var(--bg);
+    background-color: hsla(0, 0%, 0%, 0);
+}
+
+
+.pill-learnmore-sedan {
+    color: var(--accent1);
+}
+
+.pill-learnmore-suv {
+    color: var(--accent2);
+}
+
+.pill-learnmore-luxury {
+    color: var(--accent3);
+}
+
+/* frontend mentor attribution style */
+
+.attribution { 
+    font-size: 11px; text-align: center;
+    /* NB need to add color setting for this one (3-column-preview-card-component) */
+    color: var(--accent2);
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
